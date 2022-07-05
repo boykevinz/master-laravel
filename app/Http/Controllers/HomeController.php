@@ -28,8 +28,8 @@ class HomeController extends Controller
             'nama_brg' => $Request->nama_brg,
             'deskripsi' => $Request->deskripsi,
             'harga' => $Request->harga,
-            'jumlah' => $Request->jumlah
-            
+            'jumlah' => $Request->jumlah,
+
         ]);
         return redirect('/home');
     }
@@ -56,7 +56,7 @@ class HomeController extends Controller
         return redirect('/home');
     }
 
-    public function hapus($id)
+    public function hapus(Request $id)
     {
         //a
         DB::table('barang')->where('id', $id)->delete();

@@ -24,6 +24,7 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::get('/home/tambah', [HomeController::class, 'tambahbarang']);
 Route::post('/home/simpan', [HomeController::class, 'simpan']);
 Route::get('/home/edit{id}', [HomeController::class, 'edit']);
-Route::get('/home/updade', [HomeController::class, 'update']);
+Route::post('/home/updade', [HomeController::class, 'update']);
 Route::get('/home/hapus{id}', [HomeController::class, 'hapus']);
+
 
