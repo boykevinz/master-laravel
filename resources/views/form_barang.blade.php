@@ -250,23 +250,23 @@
                 <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Id</label>
-                    <input name="id" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input name="id" type="text" class="form-control" id="exampleInputEmail1" placeholder="ID">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Nama Barang</label>
-                    <input type="text" name="nama_brg" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="text" name="nama_brg" class="form-control" id="exampleInputPassword1" placeholder="Nama Barang">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Deskripsi</label>
-                    <input name="deskripsi" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input name="deskripsi" type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Harga</label>
-                    <input name="harga" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input name="harga" type="text" class="form-control" id="exampleInputPassword1" placeholder="Harga">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Jumlah</label>
-                    <input name="jumlah" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input name="jumlah" type="text" class="form-control" id="exampleInputPassword1" placeholder="Jumlah">
                 </div>                                              
                 </div>
                 <!-- /.card-body -->

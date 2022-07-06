@@ -283,11 +283,11 @@
                     <td>{{ $brg ->harga }}</td>
                     <td>{{ $brg ->jumlah }}</td>
                     <td>
-                        <a href="/home/edit{{ $brg->id }}">
+                        <a href="{{ url('home/edit/'.$brg->id) }}">
                             <button type="submit" class="btn btn-primary btn-sm">Edit</button>    
                         </a>
                         |
-                        <a href="/home/delete{{ $brg->id }}"><button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button></a>
+                        <a href="{{ 'home/delete/' . $brg->id }}"><button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button></a>
                     </td>                    
                   </tr>
                   @endforeach

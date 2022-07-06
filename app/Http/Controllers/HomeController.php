@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class HomeController extends Controller
 {
     public function index()
@@ -37,9 +38,9 @@ class HomeController extends Controller
     public function edit($id)
     {
         //a
-        $barangs = DB::table('barang')->where('id', $id)->get();
+        $barang = DB::table('barang')->where('id', $id)->get();
         //b
-        return view('edit', ['barang' => $barangs]);
+        return view('edit', ['barang' => $barang]);
     }
 
     public function update(Request $Request)
@@ -59,9 +60,11 @@ class HomeController extends Controller
     public function hapus(Request $id)
     {
         //a
-        DB::table('barang')->where('id', $id)->delete();
+        DB::table('barang')->where('id', $id->id)->delete();
+        //DB::table('barang')->where('id', $id)->delete();
         //b
         return redirect('/home');
+        
 
     }
 
