@@ -282,6 +282,7 @@
                     <td>{{ $brg ->deskripsi }}</td>
                     <td>{{ $brg ->harga }}</td>
                     <td>{{ $brg ->jumlah }}</td>
+                    
                     <td>
                         <a href="{{ url('home/edit/'.$brg->id) }}">
                             <button type="submit" class="btn btn-primary btn-sm">Edit</button>    

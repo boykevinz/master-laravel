@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -61,11 +61,25 @@ class HomeController extends Controller
     {
         //a
         DB::table('barang')->where('id', $id->id)->delete();
-        //DB::table('barang')->where('id', $id)->delete();
         //b
         return redirect('/home');
-        
+        }
 
+    
+    public function halamanlogin()
+    {
+        return view('login.index'); 
+    }
+
+    public function postlogin(Request $Request)
+    {
+        if(Auth::attempt($Request->only('email','password'))){
+            return redirect('/home');
+        }
+        return redirect('/home/login');
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
 
 }

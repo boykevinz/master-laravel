@@ -19,8 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::get('/home/login', [HomeController::class, 'halamanlogin'])->name('login');
+Route::post('/home/postlogin', [HomeController::class, 'postlogin'])->name('postlogin');
+
+
 //Route::get('/home', 'HomeController@index');
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/home/tambah', [HomeController::class, 'tambahbarang']);
 Route::post('/home/simpan', [HomeController::class, 'simpan']);
 Route::get('/home/edit/{id}', [HomeController::class, 'edit']);
@@ -28,4 +34,5 @@ Route::get('/home/edit/{id}', [HomeController::class, 'edit']);
 Route::post('home/update/{id}', [HomeController::class, 'update']);
 Route::get('/home/delete/{id}', [HomeController::class, 'hapus']);
 //Route::get('home/hapus/{id}', 'HomeController@hapus');
+Route::get('/login', [HomeController::class, 'hapus']);
 
