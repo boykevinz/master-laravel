@@ -31,48 +31,50 @@
                 <h3 class="card-title">List Barang</h3>
               </div>
               <div class="container mt-2">
-                <a href="/home/tambah"><button href= type="button" class="btn btn-primary float-left"><i class="fas fa-plus"></i>Tambah Barang</button></a> 
+                <a href="{{ route('formtambahuser') }}"><button href= type="button" class="btn btn-primary float-left"><i class="fas fa-plus"></i>Tambah User</button></a> 
               </div>              
               <!-- /.card-header -->              
               <div class="card-body">                
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Id Barang</th>
-                    <th>Nama Barang</th>
-                    <th>Deskripsi</th>
-                    <th>Harga</th>
-                    <th>Jumlah</th>
-                    <th>Action</th>
+                    <th>id      </th>
+                    <th>nama</th>
+                    <th>level</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>action</th
                   </tr>
                   </thead>
                   <tbody>
-                    @foreach($barang as $brg)
+                    @foreach($userpage as $tpuser)
                   <tr>
-                    <td>{{ $brg ->id }}</td>
-                    <td>{{ $brg ->nama_brg }}</td>
-                    <td>{{ $brg ->deskripsi }}</td>
-                    <td>{{ $brg ->harga }}</td>
-                    <td>{{ $brg ->jumlah }}</td>
+                    <td>{{ $tpuser ->id }}</td>
+                    <td>{{ $tpuser ->name }}</td>
+                    <td>{{ $tpuser ->level }}</td>
+                    <td>{{ $tpuser ->email }}</td>
+                    <td>{{ $tpuser ->password }}</td>
                     
                     <td>
-                        <a href="{{ url('home/edit/'.$brg->id) }}">
+                        <a href="{{ url('home/edituser/'.$tpuser->id) }}">
                             <button type="submit" class="btn btn-primary btn-sm">Edit</button>    
                         </a>
                         |
-                        <a href="{{ 'home/delete/' . $brg->id }}"><button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button></a>
+                        <a href="{{ url('home/userdelete/'.$tpuser->id) }}">
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                        </a>
                     </td>                    
                   </tr>
                   @endforeach
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Id Barang</th>
-                    <th>Nama Barang</th>
-                    <th>Deskripsi</th>
-                    <th>Harga</th>
-                    <th>Jumlah</th>
-                    <th>Action</th>
+                    <th>id</th>
+                    <th>nama</th>
+                    <th>level</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>action</th>
                   </tr>
                   </tfoot>
                 </table>

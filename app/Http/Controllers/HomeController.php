@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function tampilbarang()
     {
         //a
         $brg = DB::table('barang')->get();
@@ -80,6 +80,12 @@ class HomeController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/home/login');
     }
 
 }
